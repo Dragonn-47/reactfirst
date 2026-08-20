@@ -1,6 +1,9 @@
 import App from "./App";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
+import Products from "./pages/Products"
+import Login  from "./pages/Login";
+import Cart from "./pages/Cart";
+
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -9,7 +12,9 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {path:"", element: <Home /> },
-            {path:"products", element: <Products /> }
+            {path:"Products", element: <Products /> },
+            {path:"Login", element: <Login /> },
+            {path:"Cart", element: <Cart /> },
         ]
     }
 ]);
