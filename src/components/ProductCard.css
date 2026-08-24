@@ -1,3 +1,20 @@
-body{
-    background-color:rgb(184, 184, 163);
+h1{
+    background-color: blue;
+}
+
+.card {
+    justify-content: center;
+    align-items: center;
+    border-radius: 4%;
+    border-color: skyblue;
+    align-items: flex-end;
+}
+
+.title{
+    color:black;
+
+}
+
+.price{
+    color:red;
 }

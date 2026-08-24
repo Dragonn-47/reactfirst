@@ -2,12 +2,11 @@ import "./ProductCard.css";
 
 function ProductCard({ title, price, image}) {
     return (
-        <div>
-            <img src={image}  width="100" />
-            <h3>{title}</h3>
-            <h3>${price}</h3>
-
-        </div>
+        <div className="card">
+    <img className="card" src={image} alt={title} />
+    <h3 className="title">{title}</h3>
+    <p className="price">${price}</p>
+</div>
     )
 }
 

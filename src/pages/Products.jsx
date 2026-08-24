@@ -12,6 +12,7 @@ function Products() {
     
     return (
         <>
+        
             {products.map((item) => (
                 <ProductCard
                     key={item.id}

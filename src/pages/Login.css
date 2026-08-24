@@ -1,0 +1,24 @@
+.login-container{
+    background-color: white;
+    font-weight:bolder;
+    color:black;
+    border: 7px solid rgb(58, 12, 12);
+    text-decoration: underline;
+    font-size:20px;
+
+}
+.login-btn{
+    background-color: rgb(174, 112, 112);
+    font-weight:bolder;
+    color:black;
+    border: 7px solid rgb(253, 152, 152);
+    
+}
+.login-btn:hover{
+    font-size:16px;
+}
+.login-form{
+    color:black;
+    font-weight: bolder;
+    background-color: white;
+}
