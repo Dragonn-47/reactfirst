@@ -5,12 +5,15 @@ function Login() {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
     const onSubmit = (data) => {
         console.log("user data", data);
         alert("Registration Successful");
+
+        reset();
     };
 
     return (
@@ -64,9 +67,12 @@ function Login() {
 
                 <button type="submit" className="login-btn">
                     Register
+                    
                 </button>
+                
 
             </form>
+            
         </div>
     );
 }

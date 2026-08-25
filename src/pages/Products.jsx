@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
+import "./Product.css"
 
 function Products() {
     
@@ -12,17 +13,18 @@ function Products() {
     
     return (
         <>
-        
+        <h1 className="heading">Hello product </h1>    
+        <div>
             {products.map((item) => (
                 <ProductCard
                     key={item.id}
                     title={item.title}
                     price={item.price}
                     image={item.image}
-                />
-            ))}
-        <h1>Hello product </h1>    
+                    />
+                ))}
+        </div>
         </>
     )
 }
-export default Products;
+export default Products; 

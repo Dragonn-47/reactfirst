@@ -1,22 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 export default function Navbar() {
+  const { state, dispatch } = useContext(ThemeContext);
+
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <br />
+    <>
+    <nav className={state.theme === "light" ? "light" : "dark" }>
 
-      <Link to="/Products">Products</Link>
-      <br />
+      <div className="nav-logo">ShopKart</div>
 
-      <Link to="/Cart">cart</Link>
-      <br />
+  <div className = "nav-links"></div>
 
-      <Link to="/Login">login</Link>
-      <br />
-           
+      <Link to="/">Home</Link>&nbsp;&nbsp;
+      
+      <Link to="/Products">Products</Link>&nbsp;&nbsp;
+      
+      <Link to="/Cart">cart</Link>&nbsp;&nbsp;
+      
+      <Link to="/Login">login</Link>&nbsp;&nbsp;
+
+       <button className = "theme-btn" 
+       onClick = {() => dispatch({type: "TOGGLE_THEME" })}   
+      >
+        {state.theme === "light" ? "dark" : "light"}
+        </button> 
     </nav>
+    </>
   );
 }

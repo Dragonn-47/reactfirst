@@ -9,6 +9,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 
 
@@ -16,8 +17,11 @@ import router from "./router";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 
-
-<StrictMode>
+<ThemeProvider>
   <RouterProvider router={router} />
-</StrictMode>
+  
+</ThemeProvider>
 )
+{/* <StrictMode>
+  <RouterProvider router={router} />
+</StrictMode> */}

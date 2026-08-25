@@ -1,20 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { useContext } from "react";
+import "./App.css";
 
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
-  const [count, setCount] = useState(0)
-  return (
-    <>
-      <Navbar />
-      <Outlet />
-    </>
-  );
+    const { state } = useContext(ThemeContext);
+
+    return (
+        <div
+            style={{
+                backgroundColor:
+                    state.theme === "light" ? "#fff" : "#121212",
+
+                color:
+                    state.theme === "light" ? "#000" : "#fff",
+
+                minHeight: "100vh",
+            }}
+        >
+            <Navbar />
+            <Outlet />
+        </div>
+    );
 }
 
-export default App
+export default App;
